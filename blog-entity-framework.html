@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Understanding Entity Framework - ORM for .NET">
+    <meta name="author" content="Abanoub Magdy">
+    <title>Entity Framework Guide | Abanoub Magdy</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <style>
+        /* Enhanced Blog Styles */
+        .blog-hero {
+            background: linear-gradient(45deg, #1d3557, #457b9d);
+            padding: 120px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/imgs/pattern.svg') repeat;
+            opacity: 0.1;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .code-block pre {
+            color: #e0e0e0;
+            margin: 0;
+        }
+
+        .code-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background: #2d2d2d;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #457b9d, transparent);
+            margin: 40px 0;
+        }
+
+        .concept-box {
+            background: #f8f9fa;
+            border-left: 4px solid #457b9d;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .highlight-text {
+            color: #457b9d;
+            font-weight: 600;
+        }
+
+        .code-tag {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 2px;
+        }
+
+        .tip-box {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .tip-box::before {
+            content: '💡';
+            font-size: 24px;
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="blog.html">Abanoub Magdy</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="blog.html">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="blog.html#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="blog.html#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="blog.html#blog">Blog</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="blog.html#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <div class="blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Mastering Entity Framework</h1>
+                    <p class="lead">A Deep Dive into Microsoft's Powerful ORM Framework</p>
+                    <div class="blog-meta mt-4">
+                        <span><i class="ti-calendar"></i> Last Updated: March 2024</span>
+                        <span class="mx-3">|</span>
+                        <span><i class="ti-timer"></i> 15 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Introduction -->
+                    <div class="concept-box">
+                        <h2>What is Entity Framework?</h2>
+                        <p class="lead">
+                            Think of Entity Framework as a magical bridge between your C# code and your database. It's like having a smart assistant that handles all the complex database operations for you, letting you focus on writing beautiful code.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <i class="ti-world text-primary mb-3" style="font-size: 2rem;"></i>
+                                <h4>Cross-Platform Magic</h4>
+                                <p>Build once, run anywhere - Windows, Linux, or macOS</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <i class="ti-database text-primary mb-3" style="font-size: 2rem;"></i>
+                                <h4>Database Flexibility</h4>
+                                <p>Works with SQL Server, PostgreSQL, MySQL, and more</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <!-- Code Examples with Enhanced Styling -->
+                    <h2>Elegant Code Examples</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-tag">Model Definition</span>
+                        </div>
+<pre><code class="language-csharp">
+public class Customer
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public List<Order> Orders { get; set; }
+}
+</code></pre>
+                    </div>
+
+                    <div class="tip-box">
+                        <h5>Pro Tip: Code First Approach</h5>
+                        <p>
+                            Start with your domain models and let Entity Framework handle the database schema. It's like having a personal architect for your database!
+                        </p>
+                    </div>
+
+                    <!-- Best Practices with Visual Enhancement -->
+                    <div class="mt-5">
+                        <h2>Best Practices</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h5>🚀 Performance</h5>
+                                    <ul class="list-unstyled">
+                                        <li>✓ Use async/await</li>
+                                        <li>✓ Implement caching</li>
+                                        <li>✓ Optimize queries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h5>🛡️ Security</h5>
+                                    <ul class="list-unstyled">
+                                        <li>✓ Parameterize queries</li>
+                                        <li>✓ Use connection strings securely</li>
+                                        <li>✓ Implement proper authentication</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Elements -->
+                    <div class="concept-box mt-5">
+                        <h3>Quick Reference Guide</h3>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="code-tag">DbContext</div>
+                                <div class="code-tag">DbSet<T></div>
+                                <div class="code-tag">Migration</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="code-tag">Include()</div>
+                                <div class="code-tag">SaveChanges()</div>
+                                <div class="code-tag">AsNoTracking()</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conclusion -->
+                    <div class="section-divider"></div>
+                    <div class="text-center mt-5">
+                        <h2>Ready to Master Entity Framework?</h2>
+                        <p class="lead">
+                            Start building powerful, database-driven applications today!
+                        </p>
+                        <a href="#" class="btn btn-primary mt-3">
+                            <i class="ti-github"></i> View Sample Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="#" class="mx-2"><i class="ti-linkedin"></i></a>
+                <a href="#" class="mx-2"><i class="ti-github"></i></a>
+                <a href="#" class="mx-2"><i class="ti-twitter"></i></a>
+            </div>
+            <p class="small mb-0">
+                © 2024 Created with <i class="ti-heart text-danger"></i> by Abanoub Magdy
+            </p>
+        </div>
+    </footer>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+</body>
+</html> 

@@ -195,48 +195,48 @@ const projectData = {
 'estbdal': {
 title: 'Estbdal<br />Energy Efficiency Initiative',
 description: 'A national initiative aimed at stimulating the replacement of old window air conditioners with new ones that are more efficient in consumption. Implemented under the Saudi Center for Energy Efficiency.',
-image: 'img/projects/Seec.png',
+image: 'imgs/projects/Seec.png',
 url: 'https://estbdal.seec.gov.sa/#/'
 },
 'visionAnywhere': {
 title: 'Vision Anywhere<br />Healthcare Application',
 description: 'Vision Anywhere is an internet-first secure app that provides 24/7 real-time access to patient records. Designed to support today\'s modern GP with remote care delivery and collaborative working across shared care settings.',
-image: 'img/projects/vision.png',
+image: 'imgs/projects/vision.png',
 url: 'https://www.cegedim-healthcare.co.uk/vision-anywhere'
 },
 'visionTasks': {
 title: 'Vision Tasks<br />Healthcare Collaboration Tool',
 description: 'Vision Tasks is a secure collaboration tool for use within a single practice or across multiple organizations. Providing links back to the patient record, conversations, attachments, and full traceability of assigned tasks with one to-do list for each user.',
-image: 'img/projects/tasks.png',
+image: 'imgs/projects/tasks.png',
 url: 'https://www.cegedim-healthcare.co.uk/tasks'
 },
 'ers': {
 title: 'ERS Portal<br />ICT Equipment Licensing',
 description: 'ICT Equipment Licensing Portal offers services of licenses and equipment approval of ICT devices, provided by the Communications, Space & Technology Commission (CTS).',
-image: 'img/projects/ers.png',
+image: 'imgs/projects/ers.png',
 url: 'https://ers.cst.gov.sa/arabic/pages/home.aspx'
 },
 'lcci': {
 title: 'LCCI<br />London Chamber of Commerce',
 description: 'LCCI (London Chamber of Commerce) Kentico portal is London\'s key hub for the business community, supports members\' businesses through a range of services.',
-image: 'img/projects/lcci.png',
+image: 'imgs/projects/lcci.png',
 url: 'https://www.londonchamber.co.uk/'
 },
 'havwoods': {
 title: 'Havwoods<br />Timber Flooring Specialist',
 description: 'Kentico portal for Havwoods, a leading global specialist in the timber flooring industry.',
-image: 'img/projects/Havwoods.png',
+image: 'imgs/projects/Havwoods.png',
 url: 'https://www.havwoods.com/uk/'
 },
 'etizaz': {
 title: 'Etizaz (MOD)<br />Web & Mobile Application',
 description: 'A comprehensive platform for the Ministry of Defense that manages military personnel promotions, transfers, and administrative processes. The system includes both web and mobile applications to facilitate easy access and management.',
-image: 'img/portfolio/01.jpg'
+image: 'imgs/portfolio/01.jpg'
 },
 'feker': {
 title: 'Feker (MOD)<br />Knowledge Management Portal',
 description: 'A Kentico-based knowledge management portal for the Ministry of Defense that serves as a central repository for military research, documents, and educational resources. Features include advanced search capabilities, document management, and user access controls.',
-image: 'img/portfolio/01.jpg'
+image: 'imgs/portfolio/01.jpg'
 }
 };
 
