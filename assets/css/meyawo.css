@@ -12232,3 +12232,128 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+ /* Add these styles to match meyawo design */
+ .contact-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.contact-info .title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #695aa6;
+}
+
+.contact-info .description {
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+.info-list {
+  margin-bottom: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.info-item i {
+  font-size: 20px;
+  color: #695aa6;
+  width: 30px;
+  margin-top: 5px;
+}
+
+.info-text {
+  color: #6c757d;
+}
+
+.info-text a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-text a:hover {
+  color: #695aa6;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links .link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #f8f9fa;
+  color: #695aa6;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.social-links .link:hover {
+  background: #695aa6;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
+
+.contact-form .form-control {
+  border: 2px solid #eee;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+.contact-form .form-control:focus {
+  border-color: #695aa6;
+  box-shadow: none;
+}
+
+.contact-form textarea.form-control {
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  padding: 12px 25px;
+  font-weight: 600;
+  background: #695aa6;
+  border: none;
+  transition: all 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: #5a4d96;
+  transform: translateY(-2px);
+}
+
+/* Add this to your existing style section */
+.about-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rotating {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
